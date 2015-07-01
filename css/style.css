@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  font-family: sans-serif;
+}
+body {
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  background-color: rgb(203,232,255);
+  margin: 0 auto;
+  padding: 1em 0;
+  display: table;
+}
+h1,
+h2 {
+  text-align: center;
+  margin: .5em 0;
+}
+section {
+  position: relative;
+  width: 95%;
+  height: auto;
+  margin: 2.5%;
+  display: block;
+  float: left;
+}
+table {
+  width: 80%;
+  margin: 0 auto;
+}
+
+td {
+  width: 50%;
+  padding: 3px;
+}
+
+td:first-child {
+  font-weight: bold;
+  text-align: right;
+}
+
+.underline {
+  border-bottom: 2px black solid;
+}
+
+@media screen and (min-width: 785px){
+  section {
+    height: auto;
+    width: 45%;
+    margin: 2.5%;
+  }
+  .details {
+    min-height: 300px;
+  }
+}
