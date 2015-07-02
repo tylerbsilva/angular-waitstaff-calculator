@@ -69,3 +69,11 @@ input {
     min-height: 300px;
   }
 }
+
+.button {
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid red;
+  display: inline-block;
+  margin: 5px;
+}
