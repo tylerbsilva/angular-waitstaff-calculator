@@ -6,9 +6,9 @@ app.controller('calcController', ['$scope', function($scope){
   $scope.submit= function(){
     if ($scope.inputNumbers.$valid){
       // Find subtotal with tax
-      $scope.subtotal = $scope.tax($scope.data_mealPrice, $scope.data_taxRate);
+      $scope.subtotal = $scope.tax($scope.data.mealPrice, $scope.data.taxRate);
       // Calculate tip amount
-      $scope.tipAmount = $scope.tip($scope.subtotal, $scope.data_tipPercentage);
+      $scope.tipAmount = $scope.tip($scope.subtotal, $scope.data.tipPercentage);
       // Update Total
       $scope.total = $scope.subtotal + $scope.tipAmount;
       // Add tips to total tips
