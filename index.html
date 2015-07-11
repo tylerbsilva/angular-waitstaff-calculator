@@ -1,79 +1,19 @@
-  <!DOCTYPE html>
-<html lang="en" ng-app="waitstaffCalc" ng-controller="calcController">
+<!DOCTYPE html>
+<html lang="en" ng-app="waitstaffCalc">
 <head>
   <meta charset="UTF-8">
   <title>Waitstaff Calculator</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 </head>
-<body>
+<body ng-controller="calcController">
   <h1>WAITSTAFF CALCULATOR</h1>
-  <section class="details">
-    <h2>Enter the Meal Details</h2>
-    <form name="inputNumbers" ng-submit="submit()">
-      <table>
-        <tbody>
-          <tr>
-            <td>Base Meal Price:</td>
-            <td><input type="number" name="mealPrice" ng-model="data.mealPrice" required ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01" /></td>
-          </tr>
-          <tr>
-            <td>Tax Rate:</td>
-            <td><input type="number" name="taxRate" ng-model="data.taxRate" required /></td>
-          </tr>
-          <tr>
-            <td>Tip Percentage:</td>
-            <td><input type="number" name="tipPercentage" ng-model="data.tipPercentage" required /></td>
-          </tr>
-          <tr>
-            <td><input type="submit" /></td>
-            <td><input type="reset" /></td>
-          </tr>
-        </tbody>
-      </table>
-    </form>
-
-  </section>
-  <section class="charges">
-    <h2>Customer Charges</h2>
-    <table>
-      <tbody>
-        <tr>
-          <td>Subtotal:</td>
-          <td>{{subtotal | currency:"$"}}</td>
-        </tr>
-        <tr>
-          <td>Tip:</td>
-          <td class="underline">{{tipAmount | currency}}</td>
-        </tr>
-        <tr>
-          <td>Total:</td>
-          <td>{{total | currency}}</td>
-        </tr>
-      </tbody>
-    </table>
-
-  </section>
-  <section class="earnings">
-    <h2>My Earnings Info</h2>
-    <table>
-      <tbody>
-        <tr>
-          <td>Tip Total:</td>
-          <td>{{tipTotal | currency}}</td>
-        </tr>
-        <tr>
-          <td>Meal count:</td>
-          <td>{{mealCount}}</td>
-        </tr>
-        <tr>
-          <td>Average Tip Per Meal:</td>
-          <td>{{averageTip | currency}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+  <nav>
+    <a href="#/">HOME</a> | <a href="#/new-meal">NEW MEAL</a> | <a href="#/earnings">MY EARNINGS</a>
+  </nav>
+  <div ng-view></div>
   <button ng-click="resetAll()">RESET ALL</button>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
