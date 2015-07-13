@@ -5,15 +5,20 @@
   <title>Waitstaff Calculator</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body ng-controller="calcController">
+<body ng-controller="calcController" class="{loading: isLoading}">
   <h1>WAITSTAFF CALCULATOR</h1>
   <nav>
     <a href="#/">HOME</a> | <a href="#/new-meal">NEW MEAL</a> | <a href="#/earnings">MY EARNINGS</a>
   </nav>
-  <div ng-view></div>
+
+  <div class="animate-view-container">
+    <div ng-view class="animate-view"></div>
+  </div>
+
   <button ng-click="resetAll()">RESET ALL</button>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
   <script  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+  <script  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-animate.min.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
