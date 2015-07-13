@@ -102,7 +102,7 @@ button {
 }
 .animate-view-container {
   position:relative;
-  min-height: 100%;
+  height: auto;
 }
 .animate-view.ng-enter,
 .animate-view.ng-leave {
