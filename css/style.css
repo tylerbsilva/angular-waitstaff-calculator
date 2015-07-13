@@ -78,12 +78,12 @@ input {
   border-bottom: 2px black solid;
 }
 
-.button {
+button {
+  text-align: center;
   padding: 10px;
   cursor: pointer;
-  border: 1px solid red;
-  display: inline-block;
-  margin: 5px;
+  display: block;
+  margin: 6em auto;
 }
 
 .loading {
